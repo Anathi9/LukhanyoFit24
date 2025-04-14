@@ -8,18 +8,18 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+    <div class="wrapper">
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
-      <a href="index.html"><img src="https://i.ibb.co/6dm9Hh2/Whats-App-Image-2025-04-14-at-16-15-32.jpg" alt="Company Logo" /></a>
+      <a href="index.html"><img src="https://i.ibb.co/x8DYCsSz/Whats-App-Image-2025-04-15-at-00-30-29.jpg" alt="Company Logo" /></a>
     </div>
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="What we offer.html" class="active">What We Offer</a></li>
-        <li><a href="Products.html">Products</a></li>
+        <!-- <li><a href="Products.html">Products</a></li> -->
         <li><a href="90dayChallenge.html">90 Day Challenge</a></li>
         <li><a href="Contact.html">Contact</a></li>
       </ul>
@@ -48,12 +48,35 @@
           <p>Natural detox products to help cleanse your system and support overall health.</p>
         </div>
       </div>
+      <!-- View Products Button -->
+<!-- View Products Button -->
+<div class="view-products">
+    <button onclick="toggleForm()">To View Products</button>
+  </div>
+  
+  <!-- Hidden Form -->
+  <div class="product-form" id="productForm" style="display: none;">
+    <h2>Fill in Your Details</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="address" placeholder="Your Address" required>
+      <input type="tel" name="contact" placeholder="Contact Number" required>
+      <input type="text" name="budget" placeholder="Budget for the Program" required>
+      <input type="text" name="goal" placeholder="Your Body Goal" required>
+      <input type="text" name="start" placeholder="When would you love to start?" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
+  </div>
+  
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Gym Supplements. All rights reserved.</p>
+    <p>&copy; 2025 Wellness Coach. All rights reserved.</p>
     <div class="social-icons">
       <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
       <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -61,6 +84,18 @@
     </div>
   </footer>
 
+
+  <script>
+    function toggleForm() {
+      const form = document.getElementById("productForm");
+      if (form.style.display === "none") {
+        form.style.display = "block";
+      } else {
+        form.style.display = "none";
+      }
+    }
+  </script>
+  
 </body>
 </html>
 
