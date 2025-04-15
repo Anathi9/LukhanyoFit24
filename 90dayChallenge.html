@@ -71,18 +71,22 @@
         <h2>Join the 90 Day Challenge</h2>
         <p>Share your journey with us! Upload your photos and get featured.</p>
       
-        <form class="challenge-form" enctype="multipart/form-data">
+        <form class="challenge-form" action="https://formspree.io/f/mvgkynyp" method="POST">
+          <input type="hidden" name="_redirect" value="thank-you.html" />
+        
           <input type="text" name="name" placeholder="Your Name" required />
+          
           <textarea name="message" rows="4" placeholder="Your Message or Progress Story" required></textarea>
           
-          <label>Upload Day 1 (Before) Photo:</label>
-          <input type="file" name="before-photo" accept="image/*" required />
-      
-          <label>Upload Day 90 (After) Photo:</label>
-          <input type="file" name="after-photo" accept="image/*" required />
-      
+          <label>Day 1 (Before) Photo Link:</label>
+          <input type="url" name="before-photo-link" placeholder="Paste image URL (e.g., from Google Drive or Dropbox)" required />
+          
+          <label>Day 90 (After) Photo Link:</label>
+          <input type="url" name="after-photo-link" placeholder="Paste image URL (e.g., from Google Drive or Dropbox)" required />
+        
           <button type="submit">Submit My Challenge</button>
         </form>
+        
       </section>
       
     </section>

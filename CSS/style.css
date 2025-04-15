@@ -388,6 +388,7 @@ body {
     background-color: #267b5f;
   }
   
+
   
 
   .products-section {
@@ -840,3 +841,120 @@ body {
         align-items: center;
       }
     }
+
+
+
+
+
+
+/* === 1. Fix White Space and Sticky Footer === */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #e0f2f1; /* Light soft green to match footer */
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* === 2. What We Offer Section Cards === */
+.offer-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.offer-section h1 {
+  font-size: 2.2rem;
+  color: #004d40;
+  margin-bottom: 40px;
+}
+
+.offer-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.offer-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.offer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.offer-card h3 {
+  margin-top: 0;
+  color: #004d40;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.offer-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Add a soft glowing line effect */
+.offer-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #00c853, transparent);
+  animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* === 3. Responsive Fixes === */
+@media (max-width: 768px) {
+  .offer-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offer-card {
+    width: 90%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+  }
+}
+
