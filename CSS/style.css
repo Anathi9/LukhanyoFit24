@@ -1006,6 +1006,41 @@ main {
 
 
 
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.enquiry-form button {
+  background-color: var(--bottle-green);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.enquiry-form button:hover {
+  background-color: var(--bottle-green);
+}
+
+
+
+
+
+
 
 
 
