@@ -970,7 +970,6 @@ main {
   background: linear-gradient(90deg, transparent, #00c853, transparent);
   animation: shine 3s infinite linear;
 }
-
 @keyframes shine {
   0% {
     left: -100%;
